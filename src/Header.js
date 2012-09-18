@@ -67,6 +67,9 @@ function Header(calendar, options) {
 								calendar.changeView(buttonName);
 							};
 						}
+						else if (window[buttonName]) {
+							buttonClick = window[buttonName]; // global function
+						}
 						if (buttonClick) {
 							var icon = options.theme ? smartProperty(options.buttonIcons, buttonName) : null; // why are we using smartProperty here?
 							var text = smartProperty(options.buttonText, buttonName); // why are we using smartProperty here?
