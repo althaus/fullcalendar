@@ -192,6 +192,7 @@ function View(element, calendar, viewName) {
 		var oldAllDay = event.allDay;
 		var eventId = event._id;
 		var prop = opt('eventGroupProperty') || 'id';
+		var events;
 		if (prop != 'id')
 			events = eventsByProp(prop, event[prop]);
 		else
@@ -219,6 +220,7 @@ function View(element, calendar, viewName) {
 	function eventResize(e, event, dayDelta, minuteDelta, ev, ui) {
 		var eventId = event._id;
 		var prop = opt('eventGroupProperty') || 'id';
+		var events;
 		if (prop != 'id')
 			events = eventsByProp(prop, event[prop]);
 		else
