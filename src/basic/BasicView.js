@@ -194,26 +194,6 @@ function BasicView(element, calendar, viewName) {
 				htmlEscape(weekNumberTitle) +
 				"</th>";
 		}
-<<<<<<< HEAD
-		
-		bodyCells.each(function(i, _cell) {
-			cell = $(_cell);
-			date = indexDate(i);
-			if (date.getMonth() == month) {
-				cell.removeClass('fc-other-month');
-			}else{
-				cell.addClass('fc-other-month');
-			}
-			if (+date == +today) {
-				cell.addClass(tm + '-state-highlight fc-today');
-			}else{
-				cell.removeClass(tm + '-state-highlight fc-today');
-			}
-			cell.find('div.fc-day-number').text(date.getDate());
-			trigger('dayRender', t, date, cell);
-			if (dowDirty) {
-				setDayID(cell, date);
-=======
 
 		for (col=0; col<colCnt; col++) {
 			date = cellToDate(0, col);
@@ -250,7 +230,6 @@ function BasicView(element, calendar, viewName) {
 					htmlEscape(formatDate(date, weekNumberFormat)) +
 					"</div>" +
 					"</td>";
->>>>>>> 155b78cc1a3926497ff8acd6071da9a3493d6447
 			}
 
 			for (col=0; col<colCnt; col++) {
